@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 // import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import Projects from '../components/projects'
+// import Projects from './Projects'
+import Projects from '../components/Projects'
 // const inter = Inter({ subsets: ['latin'] })
 
 
@@ -32,10 +33,10 @@ export default function Home({details}) {
                       </div>
         {/* buttons */}
                       <div style={{display:'flex',justifyContent:'center',gap:'20px'}} >
-                        <a href='https://drive.google.com/file/d/1f8Jm4zGUo3UmBzHWPQufaisQyVEaXD_N/view?        usp=sharing' target="_blank" >
+                        <a href='https://drive.google.com/file/d/1f8Jm4zGUo3UmBzHWPQufaisQyVEaXD_N/view?        usp=sharing'  >
                           <button style={{padding:'10px',backgroundColor:'blueviolet',borderRadius:'10px'}}         >Resume</button>
                         </a>
-                        <a href='https://github.com/123rishujha' target="_blank">
+                        <a href='https://github.com/123rishujha' >
                           <button style={{padding:'10px',backgroundColor:'blueviolet',borderRadius:'10px'}}       >Follow</button>
                         </a>
                       </div>
@@ -94,7 +95,7 @@ export async function getStaticProps() {
   const user = '123rishujha'
   let response = await fetch(`https://api.github.com/users/${user}`);
   let data = await response.json();
-  
+  // console.log(data);
 
   return {
     props: {details:data}, // will be passed to the page component as props
