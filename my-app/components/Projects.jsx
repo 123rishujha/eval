@@ -5,7 +5,9 @@ const Projects = ({repo}) => {
     // console.log(repo);
 
   return (
-    <div>projects</div>
+    <div>
+      All projects
+    </div>
   )
 }
 
